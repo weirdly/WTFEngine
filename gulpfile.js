@@ -38,7 +38,7 @@ gulp.task('js', function () {
 
 gulp.task('css', function () {
     return gulp.src('./src/styles/**/[^_]*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({includePaths: ['./src/styles', './node_modules/bootstrap-sass/assets/stylesheets']}).on('error', sass.logError))
         .pipe(minifier(config.minifier))
         .pipe(gulp.dest(config.webDir+'/css'));
 });
@@ -55,7 +55,10 @@ gulp.task('templates', function () {
         .pipe(jade({
             locals: YOUR_LOCALS
         }))
-        .pipe(gulp.dest(config.webDir));
+        .pipe(gulp.dest(config.webDir))
+        .on('error', function (error) {
+            console.error('' + error);
+        });
 });
 
 gulp.task('clean', function () {
