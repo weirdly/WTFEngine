@@ -1,7 +1,22 @@
-$body-bg: #00C7A5;
+$brand-primary: #00C7A5;
+
+$body-bg: $brand-primary;
 $text-color: white;
-$btn-default-color: $text-color;
+$font-size-base: 18px;
+
+$btn-default-color: $brand-primary;
 $btn-default-border: $text-color;
-$btn-default-bg: transparent;
+$btn-default-bg: white;
+
+$btn-primary-color:  $text-color;
+$btn-primary-bg:     #E85B2A;
+$btn-primary-border: transparent;
+
+$btn-success-color:  $text-color;
+$btn-success-bg:     #199BD8;
+$btn-success-border: transparent;
+
 $link-color: $text-color;
 $link-hover-color: $link-color;
+$font-family-sans-serif: aller_light, arial, sans-serif;
+

@@ -36,7 +36,12 @@ gulp.task('js', function () {
         .pipe(gulp.dest(config.webDir+'/js'))
 });
 
-gulp.task('css', function () {
+gulp.task('fonts', function () {
+    return gulp.src('./src/styles/fonts/*.{eot,svg,ttf,woff}')
+        .pipe(gulp.dest(config.webDir+'/css/fonts'));
+});
+
+gulp.task('css', ['fonts'], function () {
     return gulp.src('./src/styles/**/[^_]*.scss')
         .pipe(sass({includePaths: ['./src/styles', './node_modules/bootstrap-sass/assets/stylesheets']}).on('error', sass.logError))
         .pipe(minifier(config.minifier))
@@ -62,7 +67,7 @@ gulp.task('templates', function () {
 });
 
 gulp.task('clean', function () {
-    del([
+    del.sync([
         './web/*.html',
         config.webDir+'/css/*',
         config.webDir+'/js/*',

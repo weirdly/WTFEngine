@@ -1,7 +1,12 @@
 @import 'theme/_default';
 @import 'bootstrap';
 
+@import 'base/_fonts';
+
 @import 'layout/header';
+@import 'layout/home';
+@import 'layout/generator';
+@import 'layout/about';
 
 @import 'module/break';
 @import 'module/logo';
