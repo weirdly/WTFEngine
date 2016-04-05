@@ -1,5 +1,4 @@
 include ./_mixins
-
 doctype html
 html(lang='en')
     head
@@ -18,7 +17,7 @@ html(lang='en')
                 br
                 p.lead Make it easy – #[strong let our wellness idea generator choose your daily challenge for you.]
                 +break
-                p: a#start.btn.btn-default(href="#") Go, give me my challenge
+                p: a#start.btn.btn-primary(href="#") Go, give me my challenge
 
 
             .page.page-generator.hidden
@@ -26,19 +25,20 @@ html(lang='en')
                 #output
                 +break
                 p
-                    a#new-challenge.btn.btn-primary(href="#") Nope. Different challenge please.
-                    a.btn.btn-success(href="#") Yep, cool. Tweet my challenge.
+                    a#new-challenge.btn.btn-success(href="#") Nope. Different challenge please.
+                    a.btn.btn-info(href="#") Yep, cool. Tweet my challenge.
 
 
-            .page.page-about.hidden
+        .page.page-about.hidden
+            .container
                 h1 The #WellnessChallenge
                 p Every morning in the Weirdly office starts with a team standup. Standing around the whiteboard, each member in our band of misfits write up three priorities for their day: Two outcomes or tasks they need to achieve, and one wellness challenge.
                 p Everyone chooses a different wellness challenge each day – it could be colouring one day, doing 5 press-ups the next day, or eating lunch with someone you don’t normally talk to the next.
                 p Then, the next morning we report back on our success, before erasing yesterday’s challenges and starting fresh.
                 p Building wellness into an every-day ritual helps build a culture of mutual respect, encouragement, awareness and (most importantly) fun.
                 p
-                    a.button(href="#") Read the blog
-                    a.button(href="#") Visit Weirdly
+                    a.btn.btn-default(href="#", target="_blank") Read the blog
+                    a.btn.btn-default(href="https://weirdlyhub.com/", target="_blank") Visit Weirdly
 
 
     script(src="js/main.js")

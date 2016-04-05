@@ -4,17 +4,21 @@ $body-bg: $brand-primary;
 $text-color: white;
 $font-size-base: 18px;
 
-$btn-default-color: $brand-primary;
-$btn-default-border: $text-color;
-$btn-default-bg: white;
-
-$btn-primary-color:  $text-color;
-$btn-primary-bg:     #E85B2A;
-$btn-primary-border: transparent;
+$btn-primary-color: $brand-primary;
+$btn-primary-border: $text-color;
+$btn-primary-bg: white;
 
 $btn-success-color:  $text-color;
-$btn-success-bg:     #199BD8;
+$btn-success-bg:     #E85B2A;
 $btn-success-border: transparent;
+
+$btn-info-color:  $text-color;
+$btn-info-bg:     #199BD8;
+$btn-info-border: transparent;
+
+$btn-default-color:  $text-color;
+$btn-default-bg:     transparent;
+$btn-default-border: white;
 
 $link-color: $text-color;
 $link-hover-color: $link-color;
