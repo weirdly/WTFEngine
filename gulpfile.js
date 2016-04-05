@@ -71,7 +71,7 @@ gulp.task('watch', function () {
         }));
 });
 
-gulp.task('deploy', function () {
+gulp.task('deploy', ['build'], function () {
     return gulp.src('./web/**/*')
         .pipe(ghPages());
 });
