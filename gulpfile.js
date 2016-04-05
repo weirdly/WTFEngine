@@ -7,10 +7,18 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     del = require('del'),
     server = require('gulp-server-livereload'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    minifier = require('gulp-minifier');
 
 var config = {
-    webDir: './web'
+    webDir: './web',
+    minifier: {
+        minify: true,
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        minifyJS: true,
+        minifyCSS: true
+    }
 };
 
 gulp.task('js', function () {
@@ -31,6 +39,7 @@ gulp.task('js', function () {
 gulp.task('css', function () {
     return gulp.src('./src/styles/**/[^_]*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(minifier(config.minifier))
         .pipe(gulp.dest(config.webDir+'/css'));
 });
 
