@@ -8,11 +8,11 @@ html(lang='en')
     body
         .container
             header
-                a.pull-right(href="#") What is the #[strong #WellnessChallenge] about?
+                a#about.pull-right(href="#") What is the #[strong #WellnessChallenge] about?
                 img#logo(src="images/logo-weirdly.png", alt="Weirdly")
 
 
-            .page.page-home.hidden
+            .page.page-home
                 +break
                 p Coming up with new wellness challenges everyday can be, well, a bit of a challenge.
                 br
@@ -21,7 +21,7 @@ html(lang='en')
                 p: a#start.btn.btn-default(href="#") Go, give me my challenge
 
 
-            .page.page-generator
+            .page.page-generator.hidden
                 +break
                 #output
                 +break
