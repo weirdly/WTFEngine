@@ -8,14 +8,23 @@ class WG {
     }
 
     initEvents() {
-        $(document).on('click', 'a#start',         (e) => {e.preventDefault(), this.showPage('.page-generator');});
+        $(document).on('click', 'a#start',         (e) => {e.preventDefault(), this.changePage('.page-generator');});
         $(document).on('click', 'a#new-challenge', (e) => {e.preventDefault(), WTF.generate();});
         $(document).on('click', 'a#about',         (e) => {e.preventDefault(), this.showPage('.page-about');});
+        $(document).on('click', 'button#close',    (e) => {e.preventDefault(), this.hidePage('.page-about');});
+    }
+
+    changePage(page) {
+        this.hidePage('.page');
+        $(page).removeClass('hidden');
     }
 
     showPage(page) {
-        $('.page').addClass('hidden');
         $(page).removeClass('hidden');
+    }
+
+    hidePage(page) {
+        $(page).addClass('hidden');
     }
 };
 

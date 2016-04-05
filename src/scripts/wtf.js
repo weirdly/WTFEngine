@@ -24,6 +24,7 @@ var WTF = (function() {
     var corpus;
     var regex;
     var dom;
+    var message;
 
     /*
       ------------------------------------------------------------
@@ -198,18 +199,27 @@ var WTF = (function() {
 
         // Update output
 
-        dom.generate.text( randomItem( responses ) );
+        var response = randomItem( responses ),
+            heading = randomItem( headings );
+
+        dom.generate.text( response );
         dom.output.html(
             '<dl>' +
-                '<dt>' + randomItem( headings ) + '</dt>' +
+                '<dt>' + heading + '</dt>' +
                 '<dd>' + idea + '</dd>' +
             '</dl>'
         );
+
+        $('#tweeter').attr('href', 'https://twitter.com/intent/tweet?text='+heading + ' ' + idea);
 
         // Toggle animation
 
         setTimeout( showOutput, 0 );
         hideOutput();
+    }
+
+    function getMessage() {
+        return message;
     }
 
     function hideOutput() {

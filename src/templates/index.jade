@@ -26,19 +26,20 @@ html(lang='en')
                 +break
                 p
                     a#new-challenge.btn.btn-success(href="#") Nope. Different challenge please.
-                    a.btn.btn-info(href="#") Yep, cool. Tweet my challenge.
+                    a#tweeter.btn.btn-info(href="https://twitter.com/intent/tweet", target="_blank") Yep, cool. Tweet my challenge.
 
 
         .page.page-about.hidden
             .container
+                button#close.close(aria-label="Close"): span(aria-hidden="true") &times;
                 h1 The #WellnessChallenge
                 p Every morning in the Weirdly office starts with a team standup. Standing around the whiteboard, each member in our band of misfits write up three priorities for their day: Two outcomes or tasks they need to achieve, and one wellness challenge.
                 p Everyone chooses a different wellness challenge each day – it could be colouring one day, doing 5 press-ups the next day, or eating lunch with someone you don’t normally talk to the next.
                 p Then, the next morning we report back on our success, before erasing yesterday’s challenges and starting fresh.
                 p Building wellness into an every-day ritual helps build a culture of mutual respect, encouragement, awareness and (most importantly) fun.
                 p
-                    a.btn.btn-default(href="#", target="_blank") Read the blog
+                    a.btn.btn-default(href="https://weirdlyhub.com/news/", target="_blank") Read the blog
                     a.btn.btn-default(href="https://weirdlyhub.com/", target="_blank") Visit Weirdly
 
-
+    include _twitter
     script(src="js/main.js")
