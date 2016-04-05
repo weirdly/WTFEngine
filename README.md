@@ -35,6 +35,8 @@ To deploy the site to production, use gulp.
 This will build, then force the content of the `./web` dir into the `gh-pages` branch and push to origin.
 GitHub pages takes care of the deployment.
 
+The updated site is now available at [https://weirdly.github.com/wellness-generator](https://weirdly.github.com/wellness-generator)
+
 ## Credit
 
 Based on [WTFEngine](https://github.com/soulwire/WTFEngine)
