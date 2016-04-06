@@ -16,7 +16,7 @@ class WG {
 
     changePage(page) {
         this.hidePage('.page');
-        $(page).removeClass('hidden');
+        this.showPage(page);
     }
 
     showPage(page) {
