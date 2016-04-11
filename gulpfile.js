@@ -21,6 +21,11 @@ var config = {
     }
 };
 
+gulp.task('artifacts', function () {
+    gulp.src('artifacts/**/*')
+        .pipe(gulp.dest(config.webDir));
+});
+
 gulp.task('js', function () {
     return browserify({
         entries: './src/scripts/main.js',
@@ -67,12 +72,7 @@ gulp.task('templates', function () {
 });
 
 gulp.task('clean', function () {
-    del.sync([
-        './web/*.html',
-        config.webDir+'/css/*',
-        config.webDir+'/js/*',
-        config.webDir+'/images/*'
-    ]);
+    del.sync(['./web/**/*']);
 });
 
 gulp.task('watch', function () {
@@ -93,5 +93,5 @@ gulp.task('deploy', ['build'], function () {
         .pipe(ghPages());
 });
 
-gulp.task('build', ['clean', 'js', 'css', 'images', 'templates']);
+gulp.task('build', ['clean', 'artifacts', 'js', 'css', 'images', 'templates']);
 gulp.task('default', ['build', 'watch']);
