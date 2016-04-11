@@ -331,7 +331,7 @@ initUI();buildRexExp();generate();} /*
       ------------------------------------------------------------
     */function generate(){var type,text,part,iter=0, // Safety mechanism
 idea=randomItem(templates),item=regex.exec(idea),copy=cloneCorpus();while(item&&++iter<1000){type=item[0];text=item[1];part=randomItem(copy[text],true);idea=idea.replace(type,part);regex.lastIndex=0;item=regex.exec(idea);} // Update output
-var response=randomItem(responses),heading=randomItem(headings);dom.generate.text(response);dom.output.html('<dl>'+'<dt>'+heading+'</dt>'+'<dd>'+idea+'</dd>'+'</dl>');$('#tweeter').attr('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(heading+' '+idea+' #WellnessChallenge')); // Toggle animation
+var response=randomItem(responses),heading=randomItem(headings);dom.generate.text(response);dom.output.html('<dl>'+'<dt>'+heading+'</dt>'+'<dd>'+idea+'</dd>'+'</dl>');$('#tweeter').attr('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(heading+' '+idea+' http://wellness.weirdlyhub.com/ #WellnessChallenge')); // Toggle animation
 setTimeout(showOutput,0);hideOutput();}function getMessage(){return message;}function hideOutput(){dom.output.removeClass('animate').css('opacity',0);}function showOutput(){dom.output.addClass('animate').css('opacity',1);}function randomItem(list,remove){var index=~ ~(Math.random()*list.length);var item=list[index];if(remove)list.splice(index,1);return item;}function cloneCorpus(){var copy={};for(var key in corpus){copy[key]=corpus[key].concat();}return copy;} /*
       ------------------------------------------------------------
 
