@@ -1,0 +1,28 @@
+.share {
+	margin: 120px 0;
+	font-size: 14px;
+	font-family: aller;
+}
+.btn.twitter, .btn.facebook, .btn.google, .btn.linkedin {
+    background: url(../images/social_icons.png) no-repeat 0 0;
+    width: 43px;
+    height: 44px;
+    margin-left: 10px;
+    margin-right: 0;
+    padding: 0;
+    &:hover {
+    	background-position-y: -50px;
+    }
+}
+.btn.twitter {
+	background-position-x: 0;
+}
+.btn.facebook {
+	background-position-x: -50px;
+}
+.btn.google{
+	background-position-x: -98px;
+}
+.btn.linkedin {
+	background-position-x: -146px;
+}
