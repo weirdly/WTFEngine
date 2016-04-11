@@ -210,7 +210,7 @@ var WTF = (function() {
             '</dl>'
         );
 
-        $('#tweeter').attr('href', 'https://twitter.com/intent/tweet?text='+encodeURIComponent(heading + ' ' + idea + ' #WellnessChallenge'));
+        $('#tweeter').attr('href', 'https://twitter.com/intent/tweet?text='+encodeURIComponent(heading + ' ' + idea + ' #WellnessChallenge http://wellness.weirdlyhub.com/'));
 
         // Toggle animation
 
